@@ -170,6 +170,7 @@ body {
   right: 0;
   transform-style: preserve-3d;
   transform-origin: left;
+  transition: transform 1s cubic-bezier(.645, .045, .355, 1);
 }
 
 .book-page.page-right.turn {
