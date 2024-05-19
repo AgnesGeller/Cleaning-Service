@@ -169,6 +169,11 @@ body {
   position: absolute;
   right: 0;
   transform-style: preserve-3d;
+  transform-origin: left;
+}
+
+.book-page.page-right.turn {
+  transform: rotateY(-180deg);
 }
 
 .book-page .page-front, 
@@ -183,11 +188,11 @@ body {
 }
 
 .book-page .page-front {
-  transform: rotateY('0deg') translateZ(1px);
+  transform: rotateY(0deg) translateZ(1px);
 }
 
 .book-page .page-back {
-  transform: rotateY('180deg') translateZ(1px);
+  transform: rotateY(180deg) translateZ(1px);
 }
 
 .title {
@@ -201,8 +206,8 @@ body {
 
 .workeduc-box .workeduc-content {
   position: relative;
-  padding: 1.6rem;
-  margin-bottom: 1.2rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .workeduc-content .year {
   color: var(--main-color);
@@ -234,8 +239,19 @@ body {
   right: 1.5rem;
   width: 2rem;
   height: 2rem;
-  background: seagreen;
   cursor: pointer;
   font-size: 2rem;
-  color: var(--second-text-color)
+  color: var(--second-text-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.nextprev-btn:hover {
+  color: var(--main-color);
+}
+
+.nextprev-btn.back {
+  left: 1.5rem;
 }
